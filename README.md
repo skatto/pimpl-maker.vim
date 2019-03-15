@@ -8,7 +8,7 @@ Exanple of `.vimrc`
 ```vim
 let g:pimplmaker_impl_class_name = 'Impl'       " set the class name for pimpl pattern.
 let g:pimplmaker_pimpl_instance_name = 'pimpl'  " set the member variable name for pimpl pattern.
-nnoremap <C-p> :PimplMake<CR>                   " make pimpl pattern for the class with the current cursor
+nnoremap <C-p> :MakePimpl<CR>                   " make pimpl pattern for the class with the current cursor
 ```
 
 ## Screenshot ##
