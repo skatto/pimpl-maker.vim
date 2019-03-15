@@ -137,7 +137,7 @@ function! MakePimpl()
         \'~'.l:Impl.'() = default;',
         \'',
         \]
-        \+ map(l:func_strs,'DelAll(DelAll(v:val, "override"), " '.l:line_end_marker.' ")') +
+        \+ map(l:func_strs,'s:DelAll(s:DelAll(v:val, "override"), " '.l:line_end_marker.' ")') +
         \['',
         \'private:',
         \'',
@@ -159,8 +159,8 @@ function! MakePimpl()
 
   for idx in range(len(l:return_type_strs))
     let defs = split(get(l:def_strs, idx), ' '.l:line_end_marker.' ')
-    let def_ll = DelAll(get(defs, len(defs) - 1), '\<override\>')
-    let def_ll = DelAll(def_ll, '\<final\>')
+    let def_ll = s:DelAll(get(defs, len(defs) - 1), '\<override\>')
+    let def_ll = s:DelAll(def_ll, '\<final\>')
     let def_ll = strcharpart(def_ll, 0, strchars(def_ll) - 1).' {'
     call remove(defs, len(defs) - 1)
     call add(defs, def_ll)
@@ -209,8 +209,8 @@ function! MakePimpl()
 
   for idx in range(len(l:return_type_strs))
     let defs = split(get(l:def_strs, idx), ' '.l:line_end_marker.' ')
-    let def_ll = DelAll(get(defs, len(defs) - 1), '\<override\>')
-    let def_ll = DelAll(def_ll, '\<final\>')
+    let def_ll = s:DelAll(get(defs, len(defs) - 1), '\<override\>')
+    let def_ll = s:DelAll(def_ll, '\<final\>')
     let def_ll = strcharpart(def_ll, 0, strchars(def_ll) - 1).' {'
     call remove(defs, len(defs) - 1)
     call add(defs, def_ll)
