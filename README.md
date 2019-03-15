@@ -12,6 +12,7 @@ nnoremap <C-p> :PimplMake<CR>                   " make pimpl pattern for the cla
 ```
 
 ## Screenshot ##
+One command! (left to right)
 
 <img src="https://raw.githubusercontent.com/skatto/pimpl-maker.vim/master/screenshots/1.png">
 
