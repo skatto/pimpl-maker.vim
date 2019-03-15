@@ -13,6 +13,8 @@ nnoremap <C-p> :PimplMake<CR>                   " make pimpl pattern for the cla
 
 ## Screenshot ##
 
+<img src="https://raw.githubusercontent.com/skatto/pimpl-maker.vim/master/screenshots/1.png">
+
 ## Others ##
 This plugin is tested on few environments.
 

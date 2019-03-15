@@ -137,7 +137,7 @@ function! MakePimpl()
         \'~'.l:Impl.'() = default;',
         \'',
         \]
-        \+ map(l:func_strs,'s:DelAll(s:DelAll(v:val, "override"), " '.l:line_end_marker.' ")') +
+        \+ map(l:func_strs,'s:DelAll(s:DelAll(v:val, "\<override\>"), " '.l:line_end_marker.' ")') +
         \['',
         \'private:',
         \'',
