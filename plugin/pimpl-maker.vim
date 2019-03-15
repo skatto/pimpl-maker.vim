@@ -124,7 +124,7 @@ function! MakePimpl()
   " Make Impl class definition.
   let l:impl_func_strs = []
   for str in l:func_strs
-    call add(l:impl_func_strs, s:DelAll(s:DelAll(str, '\<override\>')), ' '.l:line_end_marker.' ')
+    call add(l:impl_func_strs, s:DelAll(s:DelAll(str, '\<override\>'), ' '.l:line_end_marker.' '))
   endfor
   let lines = [
         \'',
