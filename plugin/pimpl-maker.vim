@@ -122,6 +122,10 @@ function! MakePimpl()
   call append(lnum, ['', ''])
 
   " Make Impl class definition.
+  let l:impl_func_strs = []
+  for str in l:func_strs
+    call add(l:impl_func_strs, s:DelAll(s:DelAll(str, '\<override\>')), ' '.l:line_end_marker.' ')
+  endfor
   let lines = [
         \'',
         \'// ################################################## please move to cpp file : ',
@@ -137,7 +141,7 @@ function! MakePimpl()
         \'~'.l:Impl.'() = default;',
         \'',
         \]
-        \+ map(l:func_strs,'s:DelAll(s:DelAll(v:val, "\<override\>"), " '.l:line_end_marker.' ")') +
+        \+ l:impl_func_strs +
         \['',
         \'private:',
         \'',
