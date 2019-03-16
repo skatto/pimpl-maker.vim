@@ -15,6 +15,7 @@ nnoremap <C-p> :MakePimpl<CR>                   " make pimpl pattern for the cla
 One command! (left to right)
 
 <img src="https://raw.githubusercontent.com/skatto/pimpl-maker.vim/master/screenshots/1.png">
+<img src="https://raw.githubusercontent.com/skatto/pimpl-maker.vim/master/screenshots/2.png">
 
 ## Others ##
 This plugin is tested on few environments.
